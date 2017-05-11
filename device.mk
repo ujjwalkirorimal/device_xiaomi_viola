@@ -450,3 +450,7 @@ PRODUCT_BOOT_JARS += \
 
 # Wallpapers
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
+
+# Override heap growth limit due to high display density on device
+PRODUCT_PROPERTY_OVERRIDES += \
+    dalvik.vm.heapgrowthlimit=256m
