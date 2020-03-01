@@ -309,10 +309,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
-# Net
-PRODUCT_PACKAGES += \
-    netutils-wrapper-1.0
-
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client \
