@@ -742,9 +742,6 @@ vendor/lib/vendor.qti.hardware.vpp@1.1.so|721abfa51882df46c3261fe3eccc4b198dff3b
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|91c9e8d152409d0be6fecaea6d72fb9d1e5c1c8f
 vendor/lib/vendor.qti.hardware.vpp@1.3.so|53e5816a54793fda59928e67f9bae0f7b3bf82b9
 
-# Perf - from LA.UM.9.1.r1-09200-SMxxx0.0
-vendor/lib64/libqti-perfd-client.so|3bc34a04c34be06d501aac539c5c6b5fbdb68df9
-
 # Peripheral - from LA.UM.9.1.r1-09200-SMxxx0.0
 vendor/bin/pm-proxy|384e0d61670e629a2c5eec1aace3c148b5d55acf
 vendor/bin/pm-service|103510ce9cc410d4f9ee57481d6acbde5a70418a
