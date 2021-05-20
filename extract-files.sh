@@ -57,15 +57,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-    vendor/bin/mlipayd@1.1 | vendor/lib64/libmlipay.so | vendor/lib64/libmlipay@1.1.so )
-        "${PATCHELF}" --remove-needed vendor.xiaomi.hardware.mtdservice@1.0.so "${2}"
-    ;;
     system_ext/lib64/libwfdnative.so | system_ext/lib/libwfdnative.so | vendor/lib64/libgoodixhwfingerprint.so )
         "${PATCHELF}" --remove-needed "android.hidl.base@1.0.so" "${2}"
-    ;;
-    vendor/etc/camera/camxoverridesettings.txt )
-        sed -i "s|0x10080|0|g" "${2}"
-        sed -i "s|0x1F|0x0|g" "${2}"
     ;;
     esac
 }
