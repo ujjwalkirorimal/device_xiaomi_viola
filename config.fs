@@ -22,11 +22,8 @@ value:2907
 [AID_VENDOR_FASTRPC]
 value:2908
 
-[vendor/bin/imsdaemon]
-mode: 0755
-user: AID_RADIO
-group: AID_RADIO
-caps: NET_BIND_SERVICE BLOCK_SUSPEND WAKE_ALARM
+[AID_VENDOR_QTR]
+value:2909
 
 [vendor/bin/cnd]
 mode: 0755
@@ -40,11 +37,17 @@ user: AID_BLUETOOTH
 group: AID_BLUETOOTH
 caps: NET_ADMIN BLOCK_SUSPEND
 
-[vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti-lazy]
+[vendor/bin/pm-service]
 mode: 0755
-user: AID_BLUETOOTH
-group: AID_BLUETOOTH
-caps: NET_ADMIN BLOCK_SUSPEND
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: NET_BIND_SERVICE
+
+[vendor/bin/pd-mapper]
+mode: 0755
+user: AID_SYSTEM
+group: AID_SYSTEM
+caps: NET_BIND_SERVICE
 
 [vendor/bin/ims_rtp_daemon]
 mode: 0755
@@ -70,12 +73,6 @@ user: AID_GPS
 group: AID_GPS
 caps: SETGID SETUID
 
-[vendor/bin/pd-mapper]
-mode: 0755
-user: AID_SYSTEM
-group: AID_SYSTEM
-caps: NET_BIND_SERVICE
-
 [vendor/bin/pm-service]
 mode: 0755
 user: AID_SYSTEM
@@ -93,12 +90,6 @@ mode: 0755
 user: AID_GPS
 group: AID_GPS
 caps: NET_BIND_SERVICE
-
-[vendor/bin/xtwifi-client]
-mode: 0755
-user: AID_GPS
-group: AID_GPS
-caps: NET_BIND_SERVICE WAKE_ALARM BLOCK_SUSPEND
 
 [vendor/firmware_mnt/image/*]
 mode: 0771
