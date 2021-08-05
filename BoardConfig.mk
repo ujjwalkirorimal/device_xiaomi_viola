@@ -77,7 +77,7 @@ BOARD_USES_ALSA_AUDIO := true
 USE_CUSTOM_AUDIO_POLICY := 1
 
 # Bluetooth
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth/include
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/configs/bluetooth/include
 BOARD_HAVE_BLUETOOTH_QCOM := true
 TARGET_FWK_SUPPORTS_FULL_VALUEADDS := true
 TARGET_USE_QTI_BT_STACK := true
@@ -93,7 +93,7 @@ TARGET_USES_DISPLAY_RENDER_INTENTS := true
 TARGET_ENABLE_MEDIADRM_64 := true
 
 # Filesystem
-TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
+TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/configs/config.fs
 
 # FM
 BOARD_HAS_QCA_FM_SOC := "cherokee"
@@ -110,9 +110,9 @@ TARGET_USES_HWC2 := true
 TARGET_USES_ION := true
 
 # HIDL
-DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/manifest.xml
-DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
-DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/framework_manifest.xml
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
+DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
+DEVICE_FRAMEWORK_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/framework_manifest.xml
 
 # Input
 TARGET_INPUTDISPATCHER_SKIP_EVENT_KEY := 96
@@ -142,10 +142,10 @@ TARGET_USERIMAGES_USE_F2FS := true
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Properties
-TARGET_ODM_PROP += $(DEVICE_PATH)/odm.prop
-TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
-TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/system_ext.prop
-TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
+TARGET_ODM_PROP += $(DEVICE_PATH)/properties/odm.prop
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/properties/product.prop
+TARGET_SYSTEM_EXT_PROP += $(DEVICE_PATH)/properties/system_ext.prop
+TARGET_VENDOR_PROP += $(DEVICE_PATH)/properties/vendor.prop
 
 # QCOM
 BOARD_USES_QCOM_HARDWARE := true
@@ -170,9 +170,9 @@ VENDOR_SECURITY_PATCH := 2021-04-01
 # Sepolicy
 TARGET_SEPOLICY_DIR := msmsteppe
 include device/qcom/sepolicy_vndr/SEPolicy.mk
-BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
-BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/public
-BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
+BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/security/sepolicy/private
+BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/security/sepolicy/public
+BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/security/sepolicy/vendor
 BOARD_SEPOLICY_M4DEFS += \
     debugfs_clk=vendor_debugfs_clk \
     debugfs_ipc=vendor_debugfs_ipc \
