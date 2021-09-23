@@ -438,11 +438,7 @@ PRODUCT_PACKAGES += \
     vendor.display.config@2.0 \
     libnl \
     libqdMetaData \
-    libqdMetaData.vendor \
-    libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
+    libqdMetaData.vendor
 
 # Wallpapers
 TARGET_INCLUDE_LIVE_WALLPAPERS := false
