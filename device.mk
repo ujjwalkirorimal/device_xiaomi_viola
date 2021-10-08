@@ -126,6 +126,7 @@ PRODUCT_COPY_FILES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio@2.0-impl \
+    android.hardware.bluetooth@1.0.vendor \
     audio.bluetooth.default \
     libbthost_if \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
@@ -181,6 +182,7 @@ PRODUCT_PACKAGES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.3.vendor \
     android.hardware.drm@1.3-service.clearkey
 
 # Fingerprint feature
@@ -265,6 +267,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/uinput/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl \
     $(LOCAL_PATH)/configs/uinput/keylayout/uinput-goodix.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-goodix.kl
 
+# Keystore
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.1.vendor \
+    android.hardware.gatekeeper@1.0.vendor
+
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.xiaomi_sm6150
@@ -300,6 +307,10 @@ PRODUCT_COPY_FILES += \
 # Native Public Libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+
+# Neural-Networks
+PRODUCT_PACKAGES += \
+    android.hardware.neuralnetworks@1.3.vendor
 
 # Overlays
 PRODUCT_PACKAGES += \
@@ -349,7 +360,12 @@ PRODUCT_PACKAGES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.secure_element@1.2 \
+    android.hardware.radio.config@1.3.vendor \
+    android.hardware.tetheroffload.config@1.0.vendor \
+    android.hardware.tetheroffload.control@1.1.vendor \
+    android.system.net.netd@1.1.vendor \
+    android.hardware.secure_element@1.2.vendor \
+    android.hardware.radio.deprecated@1.0.vendor \
     libjson \
     libprotobuf-cpp-full \
     libprotobuf-cpp-full-vendorcompat \
@@ -365,6 +381,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensor
 PRODUCT_PACKAGES += \
+    android.hardware.sensors@2.0.vendor \
     libsensorndkbridge
 
 # Soong namespaces
