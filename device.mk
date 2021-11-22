@@ -348,8 +348,10 @@ PRODUCT_PACKAGES += \
     init.qcom.rc \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
-    init.recovery.qcom.rc \
     ueventd.qcom.rc
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/rootdir/etc/init.recovery.qcom.rc:recovery/root/init.recovery.qcom.rc
 
 # RCS
 PRODUCT_PACKAGES += \
