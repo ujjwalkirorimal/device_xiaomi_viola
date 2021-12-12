@@ -1150,4 +1150,3 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|4ba792ee3234dca4cd7ebbd7b3f9003
 
 # WiFi - from LA.UM.9.1.r1-09600-SMxxx0.0
 vendor/bin/cnss-daemon|53a39985ee5c8bf0a30d2935b09d8ac87014b4b2
-vendor/bin/nv_mac|292eab960355eae44a338b2011b0032bc7df422e
