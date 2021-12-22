@@ -164,7 +164,7 @@ VENDOR_SECURITY_PATCH := 2021-04-01
 
 # Sepolicy
 TARGET_SEPOLICY_DIR := msmsteppe
-include device/qcom/sepolicy_vndr/SEPolicy.mk
+include device/qcom-LA.UM.10.3.r1-xxxxx-sdm845.0/sepolicy_vndr/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/security/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(DEVICE_PATH)/security/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/security/sepolicy/vendor
